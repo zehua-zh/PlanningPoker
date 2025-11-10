@@ -8,7 +8,7 @@ on:
       - main
 
 jobs:
-  test:
+  unit-test:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,7 +27,7 @@ jobs:
     
     - name: Run tests and generate HTML report
       run: |
-        pytest test_calculatrice.py
+        pytest src/test_calculatrice.py
       env:
         CI: true
 
